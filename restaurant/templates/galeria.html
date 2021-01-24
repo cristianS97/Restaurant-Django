@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+<!-- Cambiamos el título del sitio -->
+{% block title %}{{ titulo }}{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <form action="{% url 'gallery' %}" method="POST">{% csrf_token %}
+            <label for="menu-categoria" class="seleccion">Seleccione una categoria: </label>
+            <select name="menu-categoria" id="menu-categoria" class="seleccion">
+                {% for categoria in categorias %}
+                    <option value="{{ categoria.pk }}" {% if categoria.pk == seleccion %}selected{% endif %}>
+                            {{ categoria.category | title }}
+                    </option>
+                {% endfor %}
+            </select><!-- Fin #menu-categoria -->
+        </form>
+        <div class="menu-restaurant">
+            {% for plato in platos %}
+                <div class="menu-item">
+                    {% load static %}
+                    <div class="corte">
+                        <img src="{{ plato.image }}" alt="{{ plato.name }}">
+                    </div><!-- Fin .corte -->
+                    <div class="datos">
+                        <p class="nombre">{{ plato.name }}</p>
+                        <p class="precio">${{ plato.price }}</p>
+                    </div><!-- Fin .datos -->
+                </div><!-- Fin .menu-item -->
+            {% endfor %}
+        </div><!-- Fin .menu-restaurant -->
+    </div><!-- Fin .container -->
+{% endblock %}<!-- Block content -->

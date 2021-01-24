@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    </head>
+
+    <body>
+        <header>
+            <div class="menu">
+                <div class="container">
+                    <div class="logo">
+                        <img src="{% static 'img/logo.jpg' %}" alt="">
+                    </div>
+                    <nav>
+                        <ul class="lista-menu">
+                            <li><a href="{% url 'index' %}">inicio</a></li>
+                            <li><a href="{% url 'gallery' %}">menú</a></li>
+                            <li><a href="#">contacto y pedidos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="principal">
+            <h1>Restaurant juanita</h1>
+            {% block content %}{% endblock %}
+        </div><!-- Fin .principal -->
+
+        <footer>
+            <div class="container">
+                <p>Cristian Sáez Mardones - 2021 - Todos los derechos reservados &copy;</p>
+            </div><!-- Fin .container -->
+        </footer>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script src="{% static 'js/script.js' %}"></script>
+    </body>
+</html>

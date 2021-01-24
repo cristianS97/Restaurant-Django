@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+<!-- Cambiamos el título del sitio -->
+{% block title %}{{ titulo }}{% endblock %}
+
+{% block content %}
+<div class="descripcion">
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam fringilla mi vitae hendrerit. Nullam eget iaculis ante. Nulla consectetur urna eu dui viverra, quis aliquet libero vehicula. Maecenas ac tempor enim, et gravida ante. Curabitur vel quam in nunc condimentum tincidunt. Nam quis consectetur purus. Maecenas sit amet orci mollis, tincidunt quam sed, dictum mi. Etiam convallis posuere sagittis. Vestibulum sit amet rutrum sapien. In lacinia mi sit amet urna faucibus consectetur.</p>
+
+        <p>Etiam sollicitudin, massa nec malesuada ultrices, tellus felis consequat dui, vel hendrerit metus felis eget turpis. Aenean rutrum, felis sit amet sollicitudin porta, odio nulla vehicula nunc, eu eleifend velit tellus non sapien. In vitae leo pharetra, semper nunc at, iaculis metus. Nam consectetur eleifend tincidunt. Duis dictum metus nibh, vitae egestas ligula lobortis a. Morbi eu tellus non tellus vestibulum commodo lacinia at erat. In hac habitasse platea dictumst. Ut finibus suscipit dolor, a blandit elit accumsan eget.</p>
+    </div>
+</div>
+
+<div class="container">
+    <h2 class="slogan">Nuestra ubicación (Agregar un mapa)</h2>
+
+    <div class="menu-restaurant">
+        {% for i in imagenes %}
+            <div class="menu-item">
+                {% load static %}
+                <div class="corte">
+                    <img src="{% static 'img/empanada.jpg' %}" alt="Imagen de una empanada">
+                </div><!-- Fin .corte -->
+                <div class="datos">
+                    <p class="nombre">Empanada de pino</p>
+                    <p class="precio">$1.500</p>
+                </div><!-- Fin .datos -->
+            </div><!-- Fin .menu-item -->
+        {% endfor %}
+    </div><!-- Fin .menu-restaurant -->
+</div><!-- Fin .container -->
+{% endblock %}<!-- Block content -->

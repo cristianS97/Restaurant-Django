@@ -1,0 +1,172 @@
+/* Variables */
+:root {
+    --col1: #10199e;
+    --col2: #00a2e1;
+    --col3: #7df83f;
+    --col4: #b2db32;
+    --col5: #c9c040;
+}
+/* Fuentes */
+@font-face {
+    font-family: "Lemonada-Bold";
+    src: url("fuentes/static/Lemonada-Bold.ttf");
+}
+@font-face {
+    font-family: "Lemonada-Light";
+    src: url("fuentes/static/Lemonada-Light.ttf");
+}
+@font-face {
+    font-family: "Lemonada-Medium";
+    src: url("fuentes/static/Lemonada-Medium.ttf");
+}
+@font-face {
+    font-family: "Lemonada-Regular";
+    src: url("fuentes/static/Lemonada-Regular.ttf");
+}
+@font-face {
+    font-family: "Lemonada-SemiBold";
+    src: url("fuentes/static/Lemonada-SemiBold.ttf");
+}
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+}
+html
+{
+    font-size: 62.5%; /* resets para rems, esto es igual a 10px */
+    box-sizing: border-box;
+}
+*, *:before, *:after
+{
+    box-sizing: inherit;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+header {
+    width: 100%;
+    background: var(--col1);
+    height: 8rem;
+}
+body {
+    padding-bottom: 7rem;
+}
+#mapid {
+    height: 180px;
+}
+/* Estilos menú de navegación */
+.menu .container {
+    display: flex;
+    justify-content: space-around;
+    height: 8rem;
+}
+.menu .logo {
+    width: 20%;
+    height: 8rem;
+}
+.menu .logo img {
+    width: 100%;
+    height: 8rem;
+}
+.menu nav {
+    width: 75%;
+    padding-top: 2.8rem;
+}
+.lista-menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    vertical-align: center;
+}
+.lista-menu li {
+    padding:0;
+    list-style: none;
+}
+.lista-menu li a {
+    font-family: "Lemonada-Bold";
+    font-size: 2rem;
+    color: var(--col5);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all ease-in-out 0.5s;
+}
+.lista-menu li:hover a {
+    color: #fff;
+}
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: 'Lemonada-SemiBold';
+}
+/* Estilos footer */
+footer {
+    background: var(--col2);
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    width: 100%;
+    padding: 2rem;
+}
+footer p {
+    color: var(--col4);
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: "Lemonada-Bold";
+}
+/* Estilos index */
+.descripcion {
+    background: #f2f2f2;
+    margin: 4rem 0;
+    padding: 2rem;
+}
+.descripcion p {
+    font-size: 2rem;
+    font-family: "Lemonada-Light";
+    line-height: 3rem;
+    margin-bottom: 1.5rem;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: "Lemonada-SemiBold";
+    font-size: 3rem;
+}
+/* Estilos galeria */
+.menu-restaurant {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.menu-item {
+    width: 30%;
+    margin-bottom: 2rem;
+}
+.corte {
+    width:100%;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+.corte img {
+    width: 100%;
+    height: 35rem;
+}
+.menu-item p {
+    font-family: 'Lemonada-Medium';
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+.menu-item .datos {
+    display: flex;
+    justify-content: space-between;
+}
+.menu-item .datos p {
+    color: var(--col2);
+}
+.seleccion {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
