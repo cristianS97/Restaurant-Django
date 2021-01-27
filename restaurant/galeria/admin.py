@@ -12,6 +12,7 @@ class FoodAdmin(admin.ModelAdmin):
     readonly_fields = ('created', 'updated')
     ordering = ('created', 'updated')
     list_display = ('name', 'get_category', 'created', 'updated')
+    list_filter = ('category_id', )
     
     def get_category(self, obj):
         return obj.category_id.category
