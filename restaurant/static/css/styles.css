@@ -135,6 +135,9 @@ h2 {
     font-family: "Lemonada-SemiBold";
     font-size: 3rem;
 }
+iframe {
+    width: 100%;
+}
 /* Estilos galeria */
 .menu-restaurant {
     display: flex;
