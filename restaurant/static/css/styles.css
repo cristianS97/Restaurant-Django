@@ -173,3 +173,29 @@ iframe {
     margin-bottom: 1rem;
     font-size: 2rem;
 }
+/* Formulario de inicio de sesión */
+form {
+    width: 50%;
+    margin: 0 auto;
+}
+form label,
+form input {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+form input {
+    padding: 1rem;
+}
+form input[type='submit'] {
+    text-transform: uppercase;
+}
+form input[type='submit'] {
+    background: var(--col3);
+    border: none;
+    transition: ease-in-out .5s;
+}
+form input[type='submit']:hover {
+    cursor: pointer;
+    background: var(--col4);
+}

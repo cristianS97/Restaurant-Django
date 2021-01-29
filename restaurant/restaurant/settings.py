@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'core',
     'index',
     'galeria',
+    'contact',
 ]
 
 MIDDLEWARE = [

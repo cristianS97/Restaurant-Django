@@ -21,7 +21,11 @@
                         <ul class="lista-menu">
                             <li><a href="{% url 'index' %}">inicio</a></li>
                             <li><a href="{% url 'gallery' %}">menú</a></li>
-                            <li><a href="#">contacto y pedidos</a></li>
+                            <li><a href="{% url 'contact' %}">contacto y pedidos</a></li>
+                            {% comment "" %}Verificación de cuenta de usuario{% endcomment %}
+                            {% if user.is_authenticated %}
+                                <li><a href="{% url 'logout' %}">Cerrar sesión</a></li>
+                            {% endif %}
                         </ul>
                     </nav>
                 </div>
